@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: enterprise_inventory_db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "YourStrong!Passw0rd2026"
+    ports:
+      - "1433:1433"
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P $$MSSQL_SA_PASSWORD -Q \"SELECT 1\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 40s
+
+
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: enterprise_inventory_api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__DefaultConnection: Server=db;Database=EnterpriseInventoryDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True;Encrypt=False
+      Jwt__Key: "ChangeMe_ThisIsA_32+Char_SuperSecretKey_2026!!"
+      Jwt__Issuer: "enterprise-inventory-api"
+      Jwt__Audience: "enterprise-inventory-api"
+      Jwt__ExpiresMinutes: "60"
+    ports:
+      - "8080:8080"
+
