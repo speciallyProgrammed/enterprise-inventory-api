@@ -1,9 +1,18 @@
 ﻿# Enterprise Inventory API
 
-Enterprise Inventory API is a production-ready backend service designed for managing products, stores, and stock across multiple locations.
+Enterprise Inventory API is a production-ready backend service for managing products, stores, and inventory across multiple business locations.
+
 It demonstrates clean architecture, secure authentication, and enterprise-grade backend practices.
 
 This project is built as a portfolio-grade system, suitable for real-world business use and technical evaluation.
+
+---
+
+## Frontend Application
+
+The frontend dashboard for this project is implemented with **Next.js & React** and is available here:
+
+👉 https://github.com/serlefko-cmyk/enterprise-inventory-frontend
 
 ---
 
@@ -188,7 +197,6 @@ GET /health
 ---
 
 ## Purpose
-
 This project was built as a **portfolio-grade enterprise backend**, demonstrating:
 
 - Professional ASP.NET Core API design
