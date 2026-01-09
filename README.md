@@ -189,9 +189,15 @@ GET /health
 
 ## Purpose
 
-This project was built to demonstrate professional backend development practices, real-world API design, secure authentication flows, and maintainable code.
+This project was built as a **portfolio-grade enterprise backend**, demonstrating:
 
-It is intended for technical review, interviews, and production-style evaluation.
+- Professional ASP.NET Core API design
+- Secure authentication and role-based authorization
+- Real-world inventory domain modeling
+- Clean architecture and maintainable code practices
+- Production-style configuration and deployment workflows
+
+It is intended for technical evaluation, interviews, and enterprise-level code review.
 
 ---
 
